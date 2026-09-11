@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <!-- Apertura del formulario envuelve a todos los campos -->
+
     <form action="#" method="post">
         
         <div>
@@ -39,7 +39,7 @@
             <label for="femenino">Femenino</label>
         </fieldset>
 
-        <!-- Se arregló la apertura y cierre del fieldset de Intereses -->
+        
         <fieldset>
             <legend>Intereses</legend>
             <input type="checkbox" name="intereses" id="deportes" value="deportes">
@@ -48,10 +48,19 @@
             <input type="checkbox" name="intereses" id="musica" value="musica">
             <label for="musica">Música</label>
         </fieldset>
+        
+        <div>
+            <label for="pais">País</label>
+            <select name="pais" id="pais">
+                <option value="Mexico">Mexico</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Argentina">Argentina</option>
+            </select>
+        </div>
 
         <button type="submit">Enviar</button>
 
-    </form> <!-- Cierre correcto del formulario -->
+    </form> 
 
 </body>
 </html>
