@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imágenes Responsivas</title>
+</head>
+<body>
+
+    <!-- 1. Uso de srcset y sizes con imágenes de distintos anchos -->
+    <img src="IMG/1-optimizada-recortada.jpg" alt="Gatita bebé"
+        srcset="
+            IMG/1-optimizada.jpg 400w,
+            IMG/1-optimizada-recortada-800.jpg 800w,
+            IMG/1-optimizada-recortada-1200.jpg 1200w
+        "
+        sizes="(max-width: 600px) 100vw, 50vw">
+
+    <!-- 2. Uso correcto de <picture> con etiqueta <img> de respaldo -->
+<picture>
+    <!-- 1. Pantalla GRANDE (≥ 768px) -> Foto GRANDE (900px) -->
+    <source media="(min-width: 768px)" srcset="IMG/9-optimizada-900.jpg">
+
+    <!-- 2. Pantalla MEDIANA (≥ 480px) -> Foto MEDIANA (600px) -->
+    <source media="(min-width: 480px)" srcset="IMG/3-optimizada-600.jpg">
+
+    <!-- 3. Pantalla PEQUEÑA (< 480px) -> Foto PEQUEÑA (480px) -->
+    <img src="IMG/4--optimizada-480.jpg" alt="Perrito feliz">
+</picture>
+    <!-- 3. Uso de srcset para pantallas de alta densidad (Retina / 2x) -->
+    
+    <img 
+        src="IMG/4-optimizada.jpg" 
+        alt="Perrito feliz"
+        srcset="IMG/4-optimizada.jpg 1x, IMG/4--optimizada.jpg 2x">
+    
+</body>
+</html>
